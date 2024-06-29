@@ -14,7 +14,7 @@ const productDetails = [
   { img: product2, title: "Samsung watch", price: "$350" },
   { img: product5, title: "Apple watch", price: "$500" },
   { img: product4, title: "Apple watch", price: "$250" },
-  { img: product3, title: "Samsung watch", price: "600" },
+  { img: product3, title: "Samsung watch", price: "$600" },
   { img: product6, title: "Apple watch", price: "$450" },
 ]
 
