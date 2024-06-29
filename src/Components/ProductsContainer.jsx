@@ -9,19 +9,26 @@ import product5 from "../assets/product5.jpg"
 import product6 from "../assets/product6.jpg"
 ///////////////////////////////////////////////////
 
+const productDetails = [
+  { img: product1, title: "Apple watch", price: "$450" },
+  { img: product2, title: "Samsung watch", price: "$350" },
+  { img: product5, title: "Apple watch", price: "$500" },
+  { img: product4, title: "Apple watch", price: "$250" },
+  { img: product3, title: "Samsung watch", price: "600" },
+  { img: product6, title: "Apple watch", price: "$450" },
+]
+
 //ProductsContainer Component
-const ProductsContainer = ({setProductCount}) => {
+const ProductsContainer = ({ setProductCount }) => {
   return (
-        <div className="row product-container g-0 d-flex justify-content-center">
-            
-            <Card setProductCount = {setProductCount} img = {product1} title={'Apple watch'} price={'$450'}/>
-            <Card  setProductCount = {setProductCount} img = {product2} title={'Samsung watch'} price={'$350'}/>
-            <Card setProductCount = {setProductCount} img = {product5} title={'Apple watch'} price={'$500'}/>
-            <Card setProductCount = {setProductCount} img = {product4} title={'Apple watch'} price={'$250'}/>
-            <Card  setProductCount = {setProductCount} img = {product3} title={'Samsung watch'} price={'$600'}/>
-            <Card setProductCount = {setProductCount} img = {product6} title={'Apple watch'} price={'$450'}/>
-            
-        </div>
+    <div className="row product-container g-0 d-flex justify-content-center">
+      {
+        productDetails.map(product => (
+          <Card setProductCount={setProductCount} img={product.img} title={product.title}
+            price={product.price} />
+        ))
+      }
+    </div>
   )
 }
 
